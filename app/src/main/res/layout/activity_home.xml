@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <TH.ThumbnailMenu
+        android:id="@+id/thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu_direction="bottom"
+        app:scale_ratio=".38">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8">
+            </android.support.v4.view.ViewPager>
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="会话"
+                    android:checked="true"
+                    android:textColor="@drawable/selector" />
+
+                <RadioButton
+                    android:id="@+id/contact"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="联系人"
+                    android:textColor="@drawable/selector" />
+
+                <RadioButton
+                    android:id="@+id/setting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="设置"
+                    android:textColor="@drawable/selector" />
+            </RadioGroup>
+        </LinearLayout>
+    </TH.ThumbnailMenu>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image"
+                android:background="@drawable/s"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:roundedCornerRadius="50dp"
+                app:placeholderImage="@drawable/s"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+    </FrameLayout>
+</FrameLayout>
